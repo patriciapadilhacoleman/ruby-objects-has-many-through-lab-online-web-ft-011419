@@ -26,7 +26,7 @@ class Doctor
   def appointments
     
   
-    Appointment.all.find {|appointment| appointment.doctor == self}
+    app = Appointment.all.find {|appointment| appointment.doctor == self}
      
   end
   
