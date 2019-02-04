@@ -25,8 +25,9 @@ class Doctor
   
   def appointments
     
-    appointments = []
-    appointments = Appointment.all.find {|appointment| appointment.doctor == self}
+    app = []
+    app = Appointment.all.find {|appointment| appointment.doctor == self}
+    binding.pry
      
   end
   
