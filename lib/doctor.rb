@@ -25,16 +25,9 @@ class Doctor
   
   def appointments
     
-    appointments = []
-    Appointment.all.each do |appointment|
-      
-      if appointment.doctor == self
-        
-        appointments << appointment
-      end
-      
-    end
-    appointments
+  
+    Appointment.all.find {|appointment| appointment.doctor == self}
+     
   end
   
   def patients
