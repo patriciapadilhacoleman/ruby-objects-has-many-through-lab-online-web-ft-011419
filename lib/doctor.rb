@@ -35,7 +35,7 @@ class Doctor
       end
       
     end
-    binding.pry
+    app
      
   end
   
