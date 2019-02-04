@@ -26,7 +26,15 @@ class Doctor
   def appointments
     
     app = []
-    app = Appointment.all.find {|appointment| appointment.doctor == self}
+    Appointment.all.each do |appointment| 
+      
+      if appointment.doctor == self
+        
+        app << appointment
+        
+      end
+      
+    end
     binding.pry
      
   end
