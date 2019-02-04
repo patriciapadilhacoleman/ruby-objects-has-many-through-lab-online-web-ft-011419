@@ -27,11 +27,17 @@ class Patient
   
   def appointments
     
-    app = []
-    
-    app = Appointments.all.select {|appointment| appointment.patient == self}
-    
-    app
+    appointments = []
+     Appointment.all.each do |appointment| 
+     
+      if appointment.patient == self
+        
+         appointments << appointment
+         
+      end
+     end
+     appointments
+     
   end
   
   def doctors
